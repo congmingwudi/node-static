@@ -1,0 +1,23 @@
+
+
+<head>
+  <link rel="stylesheet" href="lightningOut.css">
+  <script src="https://weecycle-community.force.com/lightning/lightning.out.js"></script>
+
+  <script>
+    $Lightning.use("c:VolunteerPositionsLightningOutApp", function() {
+        $Lightning.createComponent("c:VolunteerPositions", {},
+              "lightning",
+              function(cmp) {
+                console.log("Lightning component was created");
+                // do some stuff
+              }
+          );
+        },
+      'https://weecycle-community.force.com'
+      );
+  </script>
+
+</head>
+
+<div id="lightning"></div>
