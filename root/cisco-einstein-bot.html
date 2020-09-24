@@ -1,7 +1,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-    <title>Einstein Bot in a public site</title>
+    <title>Cisco Einstein Bot in a public site</title>
 </head>
 
 <body>
@@ -44,25 +44,25 @@
             embedded_svc.settings.entryFeature = 'LiveAgent';
     
             embedded_svc.init(
-                'https://fb-helpdesk-demo.my.salesforce.com',
-                'https://sdodemo-main-163e06a2094-165-17257d1a299.force.com/hrserviceportal',
+                'https://csone--sspoc.my.salesforce.com',
+                'https://sspoc-ciscoservicesone.cs15.force.com/Chat',
                 gslbBaseURL,
-                '00D5w000007B3dg',
-                'HR_Chat',
+                '00De0000001OkEv',
+                'Bot_to_Chat_Transfer_Queue',
                 {
-                    baseLiveAgentContentURL: 'https://c.la1-c2-ia5.salesforceliveagent.com/content',
-                    deploymentId: '5725w000000gTPE',
-                    buttonId: '5735w000000gTgZ',
-                    baseLiveAgentURL: 'https://d.la1-c2-ia5.salesforceliveagent.com/chat',
-                    eswLiveAgentDevName: 'HR_Chat',
-                    isOfflineSupportEnabled: false
+                    baseLiveAgentContentURL: 'https://c.la1-c1cs-iad.salesforceliveagent.com/content',
+                    deploymentId: '572e0000000022S',
+                    buttonId: '573e00000004Dgf',
+                    baseLiveAgentURL: 'https://d.la1-c1cs-iad.salesforceliveagent.com/chat',
+                    eswLiveAgentDevName: 'Bot_to_Chat_Transfer_Queue',
+                    isOfflineSupportEnabled: true
                 }
             );
         };
     
         if (!window.embedded_svc) {
             var s = document.createElement('script');
-            s.setAttribute('src', 'https://fb-helpdesk-demo.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+            s.setAttribute('src', 'https://csone--sspoc.my.salesforce.com/embeddedservice/5.0/esw.min.js');
             s.onload = function() {
                 initESW(null);
             };
@@ -70,7 +70,7 @@
         } else {
             initESW('https://service.force.com');
         }
-    </script>
+    </script>   
     <!-- end: Einstein Bot embedded service -->
 
 </body>
